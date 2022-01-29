@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -laf --format = -m, ls -r *\
+ls -map
