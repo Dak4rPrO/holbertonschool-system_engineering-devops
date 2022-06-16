@@ -3,7 +3,7 @@
 # y en la novena iteracion imprime "Hi"
 
 i=1
-while ((i <= 10))
+while ((i <= 20))
 do
     case $i in
     4) echo "bad luck from China" ;;
