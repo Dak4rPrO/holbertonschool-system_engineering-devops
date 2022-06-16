@@ -12,22 +12,22 @@
 #if the file is a regular file: school is a regular file
 #if the file is not a regular file: (nothing)
 
-if [ -a "school" ]
-then
-    	echo "school file exists"
-    	if [ -s "school" ]
-    	then 
-				echo "school file is not empty"
-    	else
-				echo "school file is empty"
-    	fi
-
-    	if [ -f "school" ]
-		then
-		    	echo "school is a regular file"
-    	fi
-
-elif [ ! -a "school" ]
-then
-    	echo "school file does not exist"
+if [ -a "school" ]                                            
+then                                                          
+        echo "school file exists"                             
+        if [ -s "school" ]                                    
+        then                                                  
+                echo "school file is not empty"               
+        else                                                  
+                echo "school file is empty"                   
+        fi                                                    
+                                                              
+        if [ -f "school" ]                                    
+        then                                                  
+                echo "school is a regular file"               
+        fi                                                    
+                                                              
+elif [ ! -a "school" ]                                        
+then                                                          
+        echo "school file does not exist"                     
 fi
