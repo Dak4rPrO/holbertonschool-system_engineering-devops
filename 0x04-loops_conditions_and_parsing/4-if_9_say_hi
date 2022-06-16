@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # script que imprime 10 veces usando if la frase "Best School"
 # y en la novena iteracion imprime "Hi"
 
