@@ -1,0 +1,16 @@
+#!/bin/env bash
+# script que imprime 10 veces usando if la frase "Best School"
+# y en la novena iteracion imprime "Hi"
+
+i=0
+while ((i <= 10))
+do
+    echo "Best School"
+    if ((i == 4))
+    then
+        echo "bad luck"
+    elif ((i == 8))
+        echo "good luck"
+    fi
+    ((i++))
+done

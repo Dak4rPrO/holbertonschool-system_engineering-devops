@@ -1,0 +1,9 @@
+#!/bin/env bash
+# script que imprime 10 veces usando until la frase "Best School"
+
+i=0
+until ((i > 9))
+do
+    echo "Best School"
+    ((i++))
+done
