@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 # script que imprime 10 veces usando while la frase "Best School"
 
-x=1; while  [ $x -le 10 ]; do echo "Best School" $(( x++ )); done
+x=1;
+while  [ $x -le 10 ]; 
+do 
+    echo "Best School" $(( x++ ));
+done
