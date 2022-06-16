@@ -4,4 +4,5 @@
 #In a list format
 #Where only the part of the name after the first dash is displayed
 
-for i in $(ls); do echo "$i" | cut -d "-" -f 2; done;
+ls=$(ls)
+for i in $ls; do echo "$i" | cut -d "-" -f 2; done;
