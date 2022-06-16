@@ -17,14 +17,14 @@ then
     	echo "school file exists"
     	if [ -s "school" ]
     	then 
-		echo "school file is not empty"
+				echo "school file is not empty"
     	else
-		echo "school file is empty"
+				echo "school file is empty"
     	fi
 
     	if [ -f "school" ]
-	then
-	    	echo "school is a regular file"
+		then
+		    	echo "school is a regular file"
     	fi
 
 elif [ ! -a "school" ]
