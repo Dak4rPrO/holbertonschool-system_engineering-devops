@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #Bash script that stops 4-to_infinity_and_beyond process.
 
-pkill "$(ps -auxf | pgrep -f infinity)"
+pkill -f infinity
