@@ -1,0 +1,35 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   6972  1424 ?        Ss   Jun11   0:00 /bin/bash /etc/sandbox_run.sh
+root        11  0.0  0.0  12172   968 ?        S    Jun11   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        41  0.0  0.0   7236  1660 pts/1    Ss+  Jun11   0:00 /bin/bash
+root       287  0.0  0.0   7236  1652 pts/0    Ss   Jun11   0:00 /bin/bash
+root       430  0.0  0.0  22052  1408 pts/0    S+   Jun11   0:00 vi 2-selection_sort.c
+root       431  0.0  0.0   7236  1680 pts/2    Ss+  Jun11   0:00 /bin/bash
+root       511  0.0  0.0   7236  1684 pts/3    Ss   Jun11   0:00 /bin/bash
+root       654  0.0  0.0  22052  1408 pts/3    S+   Jun11   0:00 vi 2-selection_sort.c
+root       655  0.0  0.0   7236  1720 pts/4    Ss+  Jun12   0:00 /bin/bash
+root       790  0.0  0.0   7236  2116 pts/5    Ss   Jun13   0:00 /bin/bash
+root       961  0.0  0.0  22124  1868 pts/5    S+   Jun13   0:00 vi 3-quick_sort.c
+root       962  0.0  0.0   7236  2240 pts/6    Ss+  Jun13   0:00 /bin/bash
+root       974  0.0  0.0   7236  2168 pts/7    Ss   Jun13   0:00 /bin/bash
+root      1095  0.0  0.0  22128  1844 pts/7    S+   Jun13   0:00 vi 1-insertion_sort_list.c
+root      1096  0.0  0.0   7236  3056 pts/8    Ss+  Jun16   0:00 /bin/bash
+root      1110  0.0  0.0   7236  3092 pts/9    Ss+  Jun16   0:00 /bin/bash
+root      1131  0.0  0.0   7204  3208 ?        Ss   Jun16   0:00 bash
+root      1197  0.0  0.0   2608   356 ?        S    Jun16   0:00 sh /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/code-server --start-server --host=127.0.0.1 --accept-server-license-terms --enable-remote-auto-shutdown --port=0 --telemetry-level all --connection-token-file /root/.vscode-server/.30d9c6cd9483b2cc586687151bcbcd635f373630.token
+root      1207  0.0  0.5 894080 21644 ?        Sl   Jun16   0:05 /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/out/server-main.js --start-server --host=127.0.0.1 --accept-server-license-terms --enable-remote-auto-shutdown --port=0 --telemetry-level all --connection-token-file /root/.vscode-server/.30d9c6cd9483b2cc586687151bcbcd635f373630.token
+root      1268  0.0  0.3 617568 13808 ?        Sl   Jun16   0:03 /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/out/bootstrap-fork --type=ptyHost
+root      1305  0.0  0.0   7104  3380 ?        Ss   Jun16   0:00 bash
+root      1443  0.0  0.0   7236  3688 pts/10   Ss   Jun16   0:00 /bin/bash
+root      1573  0.0  0.1  22284  6564 pts/10   S+   Jun16   0:00 vi 9-to_file_or_not_to_file
+root      1619  0.0  0.0   7236  3664 pts/11   Ss+  Jun16   0:00 /bin/bash
+root      1643  0.0  0.0   7236  3716 pts/12   Ss+  Jun16   0:00 /bin/bash
+root      1733  0.0  0.0   7236  3708 pts/13   Ss+  Jun16   0:00 /bin/bash
+root      2545  0.0  0.0   7236  3884 pts/14   Ss   08:19   0:00 /bin/bash
+root      2571  0.0  0.2  22736 10564 pts/14   S+   08:23   0:00 vi README.md
+root      2573  0.0  0.0   7236  3856 pts/15   Ss   08:26   0:00 /bin/bash
+root      2596  0.0  0.0   5476   536 ?        S    08:29   0:00 sleep 180
+root      2599  0.0  0.0   5476   540 ?        S    08:30   0:00 sleep 180
+root      2601  0.0  0.0   6972  3256 pts/15   S+   08:31   0:00 bash ./1-list_your_processes
+root      2602  0.0  0.0   9128  3268 pts/15   R+   08:31   0:00 ps -aux
+root      2603  0.0  0.0   5836  2292 pts/15   S+   08:31   0:00 less
