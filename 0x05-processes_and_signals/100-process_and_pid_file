@@ -11,8 +11,7 @@ while true
 do
   	trap 'echo "I hate the kill command"' SIGTERM
   	trap 'echo "Y U no love me?"' SIGINT
-	trap 'rm -r /var/run/myscript.pid' SIGQUIT
-	trap 'rm -r /var/run/myscript.pid' SIGTERM
+	trap 'rm -r /var/run/myscript.pid' SIGQUIT || trap 'rm -r /var/run/myscript.pid' SIGTERM
   	echo "To infinity and beyond"
 	sleep 2
 done
