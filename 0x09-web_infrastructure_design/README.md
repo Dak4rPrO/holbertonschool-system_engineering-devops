@@ -1,4 +1,4 @@
-##What Is an Application Server vs. a Web Server?
+#What Is an Application Server vs. a Web Server?
 
 Despite the contrast implied by “application server vs. web server,” on the Internet the two types of server are usually deployed together for a common purpose: fulfilling user requests for content from a website. There are no standards documents that define the properties of web servers and application servers, but let’s look at how the terms are commonly understood.
 
