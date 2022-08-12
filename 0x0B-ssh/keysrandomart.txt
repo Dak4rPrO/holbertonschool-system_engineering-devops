@@ -1,0 +1,21 @@
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/linux/.ssh/id_rsa): /mnt/c/Users/4382/Documents/GitHub/holberton-system_engineering-devops/0x0B-ssh/key.private.txt
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /mnt/c/Users/4382/Documents/GitHub/holberton-system_engineering-devops/0x0B-ssh/key.private.txt
+Your public key has been saved in /mnt/c/Users/4382/Documents/GitHub/holberton-system_engineering-devops/0x0B-ssh/key.private.txt.pub
+The key fingerprint is:
+SHA256:rB/WOwiE/Y1/ac7tsNnMSeZtuh/BzC1eG1DEYkz1u1k linux@H01
+The key's randomart image is:
+
++---[RSA 3072]----+
+|            o.++ |
+|             +...|
+|     o      ... .|
+|    . o.      = o|
+|     . .So    .BE|
+|      ..o..  . oB|
+|      ..oo. ..+= |
+|       o..oo+% oo|
+|        . .==.@=o|
++----[SHA256]-----+
