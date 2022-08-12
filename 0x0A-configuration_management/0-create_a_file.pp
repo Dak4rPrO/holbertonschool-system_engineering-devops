@@ -1,3 +1,4 @@
+# Using Puppet, create a file in /tmp.
 file { '/tmp/school':
   owner   => www-date,
   group   => www-date,

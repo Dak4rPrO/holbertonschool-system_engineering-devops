@@ -1,3 +1,20 @@
+Check that your Puppet manifest conform to the style guide
+http://puppet-lint.com
+-----------------------
+Install It!
+package { 'puppet-lint':
+  ensure   => '1.1.0',
+  provider => 'gem',
+}
+Or, if you really must:
+$ gem install puppet-lint
+-----------------------
+Run It!
+$ puppet-lint /etc/puppet/modules
+foo/manifests/bar.pp - ERROR: trailing whitespace found on line 1
+apache/manifests/server.pp - WARNING: variable not enclosed in {} on line 56
+...
+-----------------------
 Tasks
 0. Create a file
 mandatory
