@@ -3,7 +3,6 @@
 # up your client SSH configuration file so that you can connect to a
 # server without typing a password.
 file { '~/ssh/school':
-  ensure                 => create
   host                   => *
   line                   => IdentityFile ~/.ssh/school,
   PasswordAuthentication => 'no'
