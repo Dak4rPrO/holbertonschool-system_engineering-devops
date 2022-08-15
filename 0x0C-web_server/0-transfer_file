@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that transfers a file from our client to a server
+
+scp -o ProxyJump user@jumphost /path/to/local_file final_server:/destination/path
