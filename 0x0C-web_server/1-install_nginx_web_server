@@ -3,6 +3,6 @@
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
-chmod u+x /var/www/html/index.html
+sudo chmod u+x /var/www/html/index.html
 echo "Hello world" > /var/www/html/index.html
-sduo service nginx start
+sudo service nginx start
