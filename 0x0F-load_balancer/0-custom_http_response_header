@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # In this first task you need to configure web-02 to be identical to web-01
 
-new_string="listen 80 default_server;\nlisten [::]:80 default_server;\nlocation /redirect_me {\nrewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n}"
+
+new_string="listen 80 default_server;\nlisten [::]:80 default_server;\nlocation /redirect_me {\nrewrite ^/redirect_me ------- permanent;\n}"
 sudo sed -i "s/listen 80 default_server;\nlisten [::]:80 default_server;/$new_string/" /etc/nginx/sites-available/default
 sudo service nginx restart
