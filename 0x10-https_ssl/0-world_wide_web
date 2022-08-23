@@ -5,7 +5,7 @@
 # about subdomains.
 
 domains () {
-	if [[ "2" ]]
+	if [[ $2 ]]
 	then
 		dig $2.$1 | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v var="$2" '{split($0,args," "); printf ("The subdomain %s is a %s record and points to %s\n"), var, args[4], args[5]}'
 	else
