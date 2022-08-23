@@ -5,7 +5,7 @@
 # about subdomains.
 
 domains () {
-	if [[ ! $2 ]]
+	if [[ "!#" -ne "2" ]]
 	then
 		dig lb-01."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{split($0,args," "); printf ("The subdomain lb-01 is a %s record and points to %s\n"), args[4], args[5]}'
 		dig web-01."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{split($0,args," "); printf ("The subdomain web-01 is a %s record and points to %s\n"), args[4], args[5]}'
