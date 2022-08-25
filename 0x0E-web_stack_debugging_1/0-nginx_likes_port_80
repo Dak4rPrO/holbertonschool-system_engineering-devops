@@ -5,7 +5,5 @@
 # issue. Then, write a Bash script with the minimum number of commands to 
 # automate your fix.
 
-new_string="listen 80 default_server;\nlisten [::]:80 default_server;"
-sudo chmod 777 /etc/nginx/sites-enabled/default
-sudo sed -i "s/listen 8080 default_server;\nlisten [::]:8080 default_server;/$new_string/" /etc/nginx/sites-enabled/default
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 sudo service nginx restart
