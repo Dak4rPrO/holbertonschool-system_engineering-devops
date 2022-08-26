@@ -7,8 +7,8 @@ global
         user haproxy
         group haproxy
         daemon
-        maxconn 2048
-        tune.ssl.default-dh-param 2048
+        maxconn 4000
+        tune.ssl.default-dh-param 4000
 
         # Default SSL material locations
         ca-base /etc/ssl/certs
@@ -34,32 +34,33 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-        option forwardfor
-        option http-server-close
+        #option forwardfor
+        #option http-server-close
 
 frontend www-http
-        bind 54.91.70.234:80
-        reqadd X-Forwarded-Proto:\ http
-        default_backend www-backend
+        mode http
+        bind :80
+        #reqadd X-Forwarded-Proto:\ http
+        #http-request set-header X-Forwarded-Proto https
+        http-request redirect scheme https unless { ssl_fc }
+        default_backend servers
 
 frontend www-https
-        bind 54.91.70.234:80:443 ssl crt /etc/haproxy/certs/www.mirandaclub.tech.pem
-        reqadd X-Forwarded-Proto:\ https
-        acl letsencrypt-acl path_beg /.well-known/acme-challenge/
-        use_backend letsencrypt-backend if letsencrypt-acl
-        default_backend www-backend
+        bind :443 ssl crt /etc/haproxy/certs/www.mirandaclub.tech.pem
+        #reqadd X-Forwarded-Proto:\ https
+        #http-request set-header X-Forwarded-Proto https
+        #acl letsencrypt-acl path_beg /.well-known/acme-challenge/
+        #use_backend letsencrypt-backend if letsencrypt-acl
+        default_backend servers
 
-backend www-backend
+backend servers
+        server 4382-web-01 18.234.212.37:80
+        server 4382-web-02 52.201.215.9:80
+
+listen http-incoming
+        mode http
         balance roundrobin
-        redirect scheme https if !{ ssl_fc }
-        server 4382-web-01 18.234.212.37:80 check
-        server 4382-web-02 52.201.215.9:80 check
-
-backend letsencrypt-backend
-        server letsencrypt 127.0.0.1:54321
-
-listen 4382-lb-01
-        bind *:80
-        balance roundrobin
-        server 4382-web-01 18.234.212.37:80 check
-        server 4382-web-02 52.201.215.9:80 check
+        bind :80
+        option forwardfor
+        server 4382-web-01 18.234.212.37
+        server 4382-web-02 52.201.215.9
