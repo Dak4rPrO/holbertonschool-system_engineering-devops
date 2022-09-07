@@ -9,11 +9,13 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    get__user = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(argv[1]))
+    get__user = requests.get('https://jsonplaceholder.typicode.com/users/{}'
+                             .format(argv[1]))
     get__name = (get__user.json().get("name"))
-    
-    var = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(argv[1]))
-   
+
+    var = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'
+                       .format(argv[1]))
+
     get__val = var.json()
     get__len__val = len(get__val)
     res = []
