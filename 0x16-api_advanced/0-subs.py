@@ -15,7 +15,7 @@ def number_of_subscribers(subreddit):
 
     try:
         subreddit = requests.get('https://www.reddit.com/r/{}/about.json'
-                            .format(subreddit), headers=user_agent)
+                                 .format(subreddit), headers=user_agent)
         return (subreddit.json()['data']['subscribers'])
     except Exception:
         return 0
