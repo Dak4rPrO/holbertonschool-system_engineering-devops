@@ -10,10 +10,8 @@ from sys import argv
 def number_of_subscribers(subreddit):
     """ return the number of subscribers
     (not active users, total subscribers)"""
-
-    user_agent = {'User-agent': 'Mozilla/5.0'}
-
     try:
+        user_agent = {'User-agent': 'Mozilla/5.0'}
         subreddit = requests.get('https://www.reddit.com/r/{}/about.json'
                                  .format(subreddit), headers=user_agent)
         return (subreddit.json()['data']['subscribers'])
