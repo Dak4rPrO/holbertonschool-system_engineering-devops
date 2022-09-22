@@ -8,9 +8,14 @@ import requests
 
 def top_ten(subreddit):
     user_agent = {'User-agent': 'Mozilla/5.0'}
+    count = 0
     try:
         r = requests.get('https://www.reddit.com/r/{}/hot.json'
-                         .format(subreddit), headers=user_agent)
-        return r.json()['data']['subscribers']
+                         .format(subreddit), headers=user_agent, allow_redirects=False)
+        r2 = r.json()['data']['children']
+        for title in r2:
+            if (count < 10):
+                print(title['data']['title'])
+            count += 1
     except Exception:
-        return 0
+        print(None)
