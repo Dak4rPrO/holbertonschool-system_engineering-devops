@@ -11,7 +11,8 @@ def top_ten(subreddit):
     count = 0
     try:
         r = requests.get('https://www.reddit.com/r/{}/hot.json'
-                         .format(subreddit), headers=user_agent, allow_redirects=False)
+                         .format(subreddit), headers=user_agent,
+                         allow_redirects=False)
         r2 = r.json()['data']['children']
         for title in r2:
             if (count < 10):
